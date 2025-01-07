@@ -2,10 +2,10 @@
   "manifest_version": 3,
   "name": "Google Extension Tab Manager",
   "version": "1.0",
-  "description": "Manage and organize your browser tabs efficiently!",
-  "permissions": ["tabs", "storage"],
+  "description": "Efficiently manage and organize your tabs!",
+  "permissions": ["tabs", "storage","activeTab", "scripting"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js" 
   },
   "action": {
     "default_popup": "index.html",
@@ -15,18 +15,10 @@
       "128": "icons/icon128.png"
     }
   },
-  "commands": {
-    "open-tab-manager": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+M",
-        "mac": "Command+Shift+M"
-      },
-      "description": "Open Tab Manager"
-    }
-  },
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  }
+  },
+  "host_permissions": ["<all_urls>"]
 }
